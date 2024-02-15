@@ -13,5 +13,5 @@
 
   - name: Printing Undefined variable 
     debug:
-      msg: "course is {{ COURSE }}"
+      msg: "course is {{ COURSE | default(DevOps) }}"
   
