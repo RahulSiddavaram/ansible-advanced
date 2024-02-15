@@ -2,6 +2,7 @@
   hosts: localhost
   vars:
     NAME: Rahul Jaya Kanth
+    website: https://www.joindevops.com/
   tasks:
   - name: convert into upper case 
     debug:
@@ -15,3 +16,6 @@
     debug:
       msg: course is {{ COURSE | default("DevOps") }}
   
+  - name: ectract hostname 
+    debug:
+      msg: "{{ website | urlsplit('hostname') }}"
