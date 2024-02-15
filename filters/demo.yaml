@@ -1,6 +1,8 @@
 - name: DEMO is on Filters
   hosts: localhost
   vars:
-  - name: Rahul Jaya Kanth
+    name: Rahul Jaya Kanth
+  tasks:
+  - name: convert into upper case 
     debug:
-    msg: "Hello {{NAME | upper}}"
+      msg: "Hello {{NAME | upper}}"
