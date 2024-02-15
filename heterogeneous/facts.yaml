@@ -9,9 +9,9 @@
     #just imagine we dont have user module available
 
   - name: add user ubuntu
-    ansible.builtin.commmand: adduser RahulJay
+    ansible.builtin.command: adduser RahulJay
     when: ansible_facts['distribution'] == "ubuntu"
 
   - name: add user centos
-    ansible.builtin.commmand: useradd RahulJay
+    ansible.builtin.command: useradd RahulJay
     when: ansible_facts['distribution'] == "centos"
