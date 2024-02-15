@@ -4,4 +4,4 @@
   tasks:
   - name: print the variables acording to environment
     ansible.builtin.debug:
-      msg: Hello "{{NAME}}""
+      msg: "Hello {{NAME}}"
