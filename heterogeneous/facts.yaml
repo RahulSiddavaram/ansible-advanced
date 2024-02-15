@@ -1,7 +1,17 @@
 - name: understand facts
-  hosts: centos
+  hosts: centos:ubuntu # or we can give all
   become: yes
   tasks:
   - name: print all the facts
     ansible.builtin.debug:
       msg: "All Facts: {{ansible_facts}}"
+
+    #just imagine we dont have user module available
+
+  - name: add user ubuntu
+    ansible.builtin.commmand: adduser RahulJay
+    when: ansible_facts['distribution'] == "ubuntu"
+
+  - name: add user centos
+    ansible.builtin.commmand: useradd RahulJay
+    when: ansible_facts['distribution'] == "centos"
