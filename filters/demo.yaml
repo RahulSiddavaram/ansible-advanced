@@ -1,0 +1,6 @@
+- name: DEMO is on Filters
+  hosts: localhost
+  vars:
+  - name: Rahul Jaya Kanth
+    debug:
+    msg: "Hello {{NAME | upper}}"
