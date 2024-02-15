@@ -11,4 +11,7 @@
     debug:
       msg: "Hello {{NAME | lower}}"
 
+  - name: Printing Undefined variable 
+    debug:
+      msg: "course is {{ COURSE }}"
   
